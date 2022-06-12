@@ -6,9 +6,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Header from'./components/style/Header.style.js';
 import {MeroButton } from'./components/style/Button.style.js';
 import Container from'./components/style/Container.style.js';
+import {GlobalStyle} from'./components/style/Global.style.js';
+import { ThemeProvider } from 'styled-components';
+import MeroTheme from'./Theme';
 
 const App = () => {
+  
   return (
+    <div>
     <Container>
         <Header>
          <FaTrash size='75' color='green' title="Dustbin"/>
@@ -22,15 +27,30 @@ const App = () => {
             </p>
 
             </h1>
-             {/* button style componetnt */}
-          <MeroButton color='white' bgc='blue' >Click Me</MeroButton>
-          <MeroButton color='red' bgc='green'>Submit</MeroButton>
+         
+         </Header>
+    </Container>
+    <div>
+      {/* to use properties of style component we use from themprovide
+    for entire which are inside themeprovider which are defined in themeprovide  */}
+     <ThemeProvider theme={MeroTheme}>
+          {/* button style componetnt */}
+          <MeroButton color='white'  >Click Me</MeroButton>
+          {/* without using themeProvider */}
+          {/* <MeroButton color='red' bgc='green'>Submit</MeroButton> */}
+
+           {/* for background color provided from themeprovider */}
+          <MeroButton color='red'>Submit</MeroButton> 
           {/* for same type of structure we do not make  many components we just change their 
           properties by passing props in componrnts */}
           {/* <MyButton>Submit</MyButton> */}
-         </Header>
-    </Container>
-   
+
+       
+                  {/* this is a global style which is applied for all components */}
+        <GlobalStyle></GlobalStyle>
+        </ThemeProvider>
+    </div>
+   </div>
   )
 }
 
