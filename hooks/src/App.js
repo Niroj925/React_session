@@ -5,6 +5,8 @@
 
 import React from 'react'
 import {useState} from 'react';
+import InputBind from'./InputBinding';
+import Toggle from'./Toggle.js';
 
 const App = () => {
  // var count=0;
@@ -21,17 +23,35 @@ const App = () => {
   console.log(x,y)
   return (
     <div>
+      {/* to check execution process at last this process also execute for one time*/}
+      {console.log('render')}
+
+         <InputBind/>
+
       {/* these all are done in browser Dom but not in react virtual DOm
       so we should have to use UseState  hook in this case  */}
       {count}
       <br/>
      <button onClick={()=>{
        setCount(count+1);//this will update in react DOm
+       setCount((prev)=>prev+1);//tracking previous values
+       //here we call two but their value is same for get val
+       setCount((prev)=>prev+1);//tracking previous values 
+       //here previous values is 2 and add with them 1 and so incr by 3 bcz of traking previous val
       console.log({count});
      }}>
 
-      Click Me
+      Incr
      </button>
+
+     <button onClick={()=>{
+       setCount(count-1);//this will update in react DOm
+      console.log({count});
+     }}>
+
+      Dcr
+     </button>
+       <Toggle/>
     </div>
   )
 }
