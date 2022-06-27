@@ -1,0 +1,22 @@
+.navbar{
+    /* for gap between  */
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+    filter:contrast(65%);
+    padding: 15px;
+}
+
+.navbar-title,
+.navbar-title>a {
+    font-weight: bold;
+    font-size: 25px;
+    color:white;
+    text-decoration: none;
+}
+
+.navbar-route ,
+.navbar-route>a{
+    color: #ccc;
+    text-decoration: none;
+}

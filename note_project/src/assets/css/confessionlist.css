@@ -1,0 +1,25 @@
+.confession-list{
+  display:flex;
+  justify-content: center;
+  /* wrap mean if overflow in a single line then go to the next line */ 
+  flex-wrap: wrap;
+  margin-top:50px;
+}
+
+.confession-card{
+    width:30%;
+    height: 200px;
+    margin-top:20px;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid light blue;
+    border-radius:15px;
+    box-shadow: 0 0 7px #ccc;
+    position: relative;
+}
+
+.time-ago{ 
+    position: absolute;
+    bottom: 5px;
+    font-size:small;
+}
