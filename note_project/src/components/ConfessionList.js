@@ -34,7 +34,7 @@ const ConfessionList = () => {
         let date=new Date(confession.createdDate);
          return(
             <div key={index} className="confession-card">
-                <div>{`${date.getFullYear()}${month[date.getMonth()]} ${date.getDate()}  `}</div>
+                <div>{`${date.getFullYear()} ${' '}${month[date.getMonth()]} ${date.getDate()}  `}</div>
                 <br/>
                 <br/>
                 {confession.note}
