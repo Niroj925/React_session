@@ -3,7 +3,7 @@ import {useParams,useNavigate} from"react-router-dom";
 
 const News = () => {
     const{id, title}=useParams();
-
+    //useNavigate hook is also used to redirect 
     let navigate=useNavigate();
   return (
     <div>

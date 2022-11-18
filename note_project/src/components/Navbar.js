@@ -15,6 +15,10 @@ const Navbar = () => {
         <Link to="/aboutus">About us</Link>
         </div>
 
+        <div className='navbar-route'> 
+        <Link to="/aboutus">Login</Link>
+        </div>
+
     </div>
   )
 }

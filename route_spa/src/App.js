@@ -30,8 +30,8 @@ const App = () => {
         </nav>
             <Routes>
             <Route path="/" element={<Homepage/>}/>
-                <Route path="contact" element={<ContactUs/>}/>
-                <Route path="about" element={<AboutUs/>}/>
+             <Route path="contact" element={<ContactUs/>}/>
+             <Route path="about" element={<AboutUs/>}/>
 
                 {/* this is parent route */}
                 <Route path="book">
