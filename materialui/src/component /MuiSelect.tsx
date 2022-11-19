@@ -19,6 +19,9 @@ function MuiSelect() {
       SelectProps={{
         multiple:true
       }}
+      size='small'
+      color='secondary'
+      helperText='select countries'
       >
       <MenuItem value='NP'>Nepal</MenuItem>
       <MenuItem value='CH'>China</MenuItem>
