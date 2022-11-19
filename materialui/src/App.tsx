@@ -1,4 +1,5 @@
 import React from 'react'
+
 // import MuiTypography from './component /MuiTypography'
 import MuiButton from './component /MuiButton'
 import MuiTextField from './component /MuiTextField'
@@ -9,7 +10,8 @@ import MuiSwitch from './component /MuiSwitch';
 import MuiRating from './component /MuiRating';
 import MuiAutoComplete from './component /MuiAutoComplete';
 import MuiLayout from './component /MuiLayout'
-
+import MuiCard from './component /MuiCard';
+import MuiAccordion from './component /MuiAccordion';
 function App() {
   return (
     <div>
@@ -23,6 +25,8 @@ function App() {
      <MuiRating/>
      <MuiAutoComplete/>
      <MuiLayout/>
+     <MuiCard/>
+     <MuiAccordion/>
     </div>
   )
 }
