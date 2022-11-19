@@ -11,7 +11,7 @@ function MuiSwitch() {
 
   return (
     <Box>
-      <FormControlLabel label='Dark Mode' control={<Switch value={checked} onChange={handleChange} size='small' color='success' />}/>
+      <FormControlLabel label='Dark Mode' control={<Switch value={checked} onChange={handleChange}  color='success' />}/>
     </Box>
   )
 }

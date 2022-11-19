@@ -17,11 +17,12 @@ function MuiRating() {
       <Rating 
       value={value}
        onChange={handleChange}
-        precision={0.5}
+       // precision={0.5}
          size='large' 
          icon={<FavoriteIcon fontSize="inherit" color='error'/>}
          emptyIcon={<FavoriteBorderedIcon fontSize='inherit'/>}
-         
+         //readonly
+         highlightSelectedOnly//this is used for emoji selector
          />
     </Stack>
   )
