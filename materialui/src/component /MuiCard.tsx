@@ -1,5 +1,8 @@
 import React from 'react'
 import {Box,Card,CardContent,Typography,CardActions,Button,CardMedia} from '@mui/material'
+// import Image from '../assets/image/niro.jpg';
+import Aama from '../assets/image/aama.jpg';
+
 function MuiCard() {
   return (
     <Box width='400px' my={4} >
@@ -8,7 +11,7 @@ function MuiCard() {
         component='img'
          height='100'
          width='100'
-         image='https://source.unsplash.com/random'
+         image={Aama}
          alt='unsplash image'
         />
         <CardContent>
