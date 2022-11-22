@@ -1,5 +1,11 @@
-import React,{useState} from 'react'
-import {Snackbar,Button } from '@mui/material';
+import React,{useState ,forwardRef} from 'react'
+import {Snackbar,Button,Alert,AlertProps } from '@mui/material';
+
+const SnackbarAlert= forwardRef<HTMLDivElement,AlertProps>(
+function SnackbarAlert(props,ref){
+    return <Alert elevation={6} ref={ref} {...props}/>
+}
+)
 
 function MuiSnackbar() {
 const[open,setOpen]=useState(false)
@@ -13,7 +19,7 @@ const handleClose=(event?:React.SyntheticEvent | Event,reason?:string) =>
   return (   
    <>
    <Button onClick={()=>setOpen(true)}>Submit</Button>
-   <Snackbar
+   {/* <Snackbar
    message='form submitted successfully'
    autoHideDuration={2500}
    open={open}
@@ -22,7 +28,19 @@ const handleClose=(event?:React.SyntheticEvent | Event,reason?:string) =>
     vertical:'bottom',
     horizontal:'right'
    }}
-   />
+   /> */}
+   <Snackbar
+   open={open}
+    autoHideDuration={3000} 
+    onClose={handleClose}
+    anchorOrigin={{ 
+        vertical:'bottom',
+        horizontal:'right'
+       }}>
+    <SnackbarAlert onClose={handleClose} severity='success'>
+      Form submit successfully
+    </SnackbarAlert>
+   </Snackbar>
    </>
   )
 }
