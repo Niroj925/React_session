@@ -12,7 +12,7 @@ import MuiAutoComplete from './component /MuiAutoComplete';
 import MuiLayout from './component /MuiLayout'
 import MuiCard from './component /MuiCard';
 import MuiAccordion from './component /MuiAccordion';
-import MuiImageList from './component /MuiImageList'
+// import MuiImageList from './component /MuiImageList'
 import MuiNavbar from './component /MuiNavbar';
 import MuiLink from './component /MuiLink';
 import MuiBreadcrumbs from './component /MuiBreadcrumbs';
@@ -27,6 +27,10 @@ import MuiToolTip  from './component /MuiToolTip';
 import MuiTable from './component /MuiTable';
 import MuiAlert from './component /MuiAlert';
 import MuiSnackbar from './component /MuiSnackbar';
+import MuiDialog from './component /MuiDialog';
+import MuiProgress from './component /MuiProgress'
+import MuiSkeleton from './component /MuiSkeleton';
+
 function App() {
   return (
     <div>
@@ -36,13 +40,17 @@ function App() {
      <MuiNavbar/>
       <MuiDrawer/>
      <MuiAlert/>
-    <MuiSnackbar/>
+     <MuiDialog/>
+     <MuiProgress/>
+     <MuiSkeleton/>
      <MuiBadge/>
     <MuiAvatar/>
      <MuiLink/>
      <MuiBreadcrumbs/>
      <MuiTextField/>
+    
      <MuiSelect/>
+      <MuiSnackbar/>
      <MuiRadioButton/>
      <MuiCheckBox/>
      <MuiSwitch/>
