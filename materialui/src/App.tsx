@@ -1,4 +1,5 @@
 import React from 'react'
+import "./App.css"
 
 // import MuiTypography from './component /MuiTypography'
 // import MuiButton from './component /MuiButton'
@@ -30,25 +31,36 @@ import MuiSnackbar from './component /MuiSnackbar';
 import MuiDialog from './component /MuiDialog';
 import MuiProgress from './component /MuiProgress'
 import MuiSkeleton from './component /MuiSkeleton';
+import MuiLoadingButton from './component /MuiLoadingButton';
+
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+
+import MuiPicker from './component /MuiPicker'
 
 function App() {
   return (
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
     <div>
      {/*<MuiTypography/>*/}
      {/* <MuiButton/> */} 
      
      <MuiNavbar/>
-      <MuiDrawer/>
+     <MuiDrawer/>
      <MuiAlert/>
      <MuiDialog/>
      <MuiProgress/>
      <MuiSkeleton/>
+
+     <MuiPicker/>
+     
      <MuiBadge/>
-    <MuiAvatar/>
+     <MuiAvatar/>
      <MuiLink/>
+     <MuiLoadingButton/>
      <MuiBreadcrumbs/>
      <MuiTextField/>
-    
+       <MuiPicker/>
      <MuiSelect/>
       <MuiSnackbar/>
      <MuiRadioButton/>
@@ -68,6 +80,7 @@ function App() {
      <MuiTable/>
      <MuiBottomNavigation/>
     </div>
+    </LocalizationProvider>
   )
 }
 
