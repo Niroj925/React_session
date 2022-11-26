@@ -1,6 +1,7 @@
 import React from 'react'
-import {Box ,Paper} from '@mui/material'
+import {Box ,Paper,Accordion,AccordionSummary,AccordionDetails,Typography} from '@mui/material'
 import {Masonry} from '@mui/lab'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function MuiMasonry() {
     const heights=[54,65,78,15,45,35,61,48,24,57,49,51]
@@ -11,14 +12,21 @@ function MuiMasonry() {
             <Paper
             key={index}
             sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height,
+                // display: 'flex',
+                // justifyContent: 'center',
+                // alignItems: 'center',
+                // height,
                 border:'1px solid'
             }}
             >
-                {index+1}
+              <Accordion sx={{minHeight:height}}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
+                    <Typography>Accordion {index+1}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                       Content
+                </AccordionDetails>
+              </Accordion>
             </Paper>
           ))
           }

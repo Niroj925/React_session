@@ -1,6 +1,6 @@
 import React from 'react'
 import "./App.css"
-
+import {createTheme,colors,ThemeProvider} from '@mui/material';
 // import MuiTypography from './component /MuiTypography'
 // import MuiButton from './component /MuiButton'
 import MuiTextField from './component /MuiTextField'
@@ -42,8 +42,20 @@ import MuiDateRangePicker from './component /MuiDateRangePicker';
 import MuiTab from './component /MuiTab'
 import MuiTimeline from './component /MuiTimeline';
 import MuiMasonry from './component /MuiMasonry'
+
+import MuiResponsiveness from './component /MuiResponsiveness';
+
+//our custome theme
+const theme=createTheme({
+  palette: {
+    secondary: {
+      main:colors.orange[400]
+    }
+  }
+})
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
     <div>
      {/*<MuiTypography/>*/}
@@ -66,6 +78,7 @@ function App() {
      <MuiTab/>
      <MuiTimeline/>
      <MuiMasonry/>
+     <MuiResponsiveness/>
 
      <MuiLink/>
      <MuiLoadingButton/>
@@ -92,6 +105,7 @@ function App() {
      <MuiBottomNavigation/>
     </div>
     </LocalizationProvider>
+    </ThemeProvider>
   )
 }
 
