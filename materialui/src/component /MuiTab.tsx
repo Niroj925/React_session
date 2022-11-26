@@ -15,22 +15,28 @@ function MuiTab() {
   return (
  
     <TabContext value={value}>
-        <Box sx={{borderBottom:1 ,boarderColor:15}}>
+        <Box sx={{borderBottom:1 ,boarderColor:15,width:'350px'}}>
             <TabList 
             aria-label='tab example'
              onChange={handleChange} 
              textColor='secondary'
-             indicatorColor='secondary'>
+             indicatorColor='secondary'
+             variant='scrollable'
+             scrollButtons='auto'>
                 <Tab label='tab one' value='1' icon={<FavoriteIcon/>} iconPosition='start'/>
 
                 <Tab label='tab two' value='2' disabled={true}/>
                 <Tab label='tab three' value='3'/>
+                <Tab label='tab four' value='4'/>
+                <Tab label='tab five' value='5'/>
             </TabList>
         </Box>
    
     <TabPanel value='1'> panel 1</TabPanel>
     <TabPanel value='2'> panel 2</TabPanel>
     <TabPanel value='3'> panel 3</TabPanel>
+    <TabPanel value='4'> panel 4</TabPanel>
+    <TabPanel value='5'> panel 5</TabPanel>
   </TabContext>
   )
 }
