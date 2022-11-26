@@ -40,7 +40,8 @@ import MuiPicker from './component /MuiPicker'
 import MuiDateRangePicker from './component /MuiDateRangePicker';
 
 import MuiTab from './component /MuiTab'
-
+import MuiTimeline from './component /MuiTimeline';
+import MuiMasonry from './component /MuiMasonry'
 function App() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -63,7 +64,9 @@ function App() {
      <MuiAvatar/>
 
      <MuiTab/>
-     
+     <MuiTimeline/>
+     <MuiMasonry/>
+
      <MuiLink/>
      <MuiLoadingButton/>
      <MuiBreadcrumbs/>
