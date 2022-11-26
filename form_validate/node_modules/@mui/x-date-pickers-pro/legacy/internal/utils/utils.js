@@ -1,0 +1,1 @@
+export var doNothing = function doNothing() {};
