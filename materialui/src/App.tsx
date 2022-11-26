@@ -47,11 +47,19 @@ import MuiResponsiveness from './component /MuiResponsiveness';
 
 //our custome theme
 const theme=createTheme({
+  status:{
+    danger:'#e53e3e',
+  },
   palette: {
-    secondary: {
+    secondary: { //secondary 
       main:colors.orange[400]
+    },
+    neutral:{
+      main:colors.grey[400],
+      darker:colors.grey[700]
     }
   }
+  
 })
 function App() {
   return (
